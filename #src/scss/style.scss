@@ -1,0 +1,13 @@
+@import 'mixins';
+@import 'fonts';
+@import 'icons';
+@import 'variables';
+@import 'reset';
+@import 'grid';
+@import 'global';
+
+@import './sections/header.scss';
+@import './sections/advice.scss';
+@import './sections/about.scss';
+@import './sections/instruction.scss';
+@import './sections/footer.scss';

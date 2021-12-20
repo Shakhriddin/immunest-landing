@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./sections/_head.html',{})
+  <body class="--lock">
+    <div class="loader">
+      <div class="circle">
+        <div class="circle__line"></div>
+        <div class="circle__line"></div>
+        <div class="circle__line"></div>
+        <span class="circle__img">
+          <img src="./images/logo.png" alt="Anest" />
+        </span>
+      </div>
+    </div>
+    <div class="wrapper">
+      @@include('./sections/_header.html',{})
+      <main class="main">
+        @@include('./sections/_advice.html',{})
+        @@include('./sections/_about.html',{})
+        @@include('./sections/_instruction.html',{})
+      </main>
+      @@include('./sections/_footer.html',{})
+    </div>
+  </body>
+  @@include('./sections/_js.html',{})
+</html>

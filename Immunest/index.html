@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta
+      name="description"
+      content=" IMMUNEST - tanadagi immunitet hujayralarining
+        faolligini oshiradi, teridagi mayda yaralar va yoriqlarni davolashga
+        yordam beradi, immunitet tizimini mustahkamlaydi. Shuningdek, antikorlarning shakllanishini, granulotsitlar va makrofaglarning fagotsitik va bakterial faolligini, interferon ishlab chiqarishda yordam beradi."
+    />
+    <meta
+      name="keywords"
+      content="Immunest, immunitet, immun, immuno, sink, d3, vitamin, salomatlik, anestpharm, anest, dori, bat, koronavirus"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon/favicon-16x16.png"
+    />
+
+    <meta property="og:locale" content="uz_UZ" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="IMMUNEST - Immunitet himoyasi" />
+    <meta
+      property="og:description"
+      content="Immunitet tizimini mustahkamlaydi."
+    />
+    <meta
+      property="og:image"
+      content="https://immunest.netlify.app/images/immunest.png"
+    />
+    <meta property="og:url" content="https://immunest.netlify.app/" />
+    <meta property="og:site_name" content="IMMUNEST" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="IMMUNEST" />
+    <meta name="twitter:title" content="IMMUNEST - Immunitet himoyasi" />
+    <meta
+      name="twitter:description"
+      content="Immunitet tizimini mustahkamlaydi."
+    />
+    <meta
+      name="twitter:image"
+      content="https://immunest.netlify.app/images/immunest.png"
+    />
+    <meta name="theme-color" content="#32b6fc" />
+    <link rel="stylesheet" href="./css/style.min.css" />
+    <title>IMMUNEST - Immunitet himoyasi | Anest&reg;</title>
+  </head>
+
+  <body class="--lock">
+    <div class="loader">
+      <div class="circle">
+        <div class="circle__line"></div>
+        <div class="circle__line"></div>
+        <div class="circle__line"></div>
+        <span class="circle__img">
+          <picture
+            ><source srcset="./images/logo.webp" type="image/webp" />
+            <img src="./images/logo.png" alt="Anest"
+          /></picture>
+        </span>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header id="header" class="header">
+        <div class="container --absolute">
+          <div class="header__row --show-items">
+            <div class="header__logo">
+              <picture
+                ><source srcset="./images/logo.webp" type="image/webp" />
+                <img src="./images/logo.png" alt="Anest&reg;"
+              /></picture>
+            </div>
+            <div class="header__menu menu">
+              <div class="menu__social social">
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a
+                      class="social__link"
+                      href="https://instagram.com/anest.uz"
+                      target="_blank"
+                      ><i class="--icon-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="social__item">
+                    <a
+                      h
+                      class="social__link"
+                      href="https://www.facebook.com/ANEST-103833408671147"
+                      target="_blank"
+                      ><i class="--icon-facebook"></i
+                    ></a>
+                  </li>
+                  <li class="social__item">
+                    <a
+                      class="social__link"
+                      href="https://t.me/anest_uz"
+                      target="_blank"
+                      ><i class="--icon-telegram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu__language">
+                <button class="menu__language-btn">uz</button>
+                <div class="menu__dropdown">
+                  <ul class="menu__dropdown-list">
+                    <li class="menu__dropdown-item">en</li>
+                    <li class="menu__dropdown-item">ru</li>
+                    <li class="menu__dropdown-item">uz</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__decor --show-items">
+          <h2 class="header__text">immunest</h2>
+        </div>
+        <div class="header__header-content">
+          <div class="container">
+            <div class="header-content__row">
+              <div class="header-content__3d --show-items">
+                <model-viewer
+                  class="model"
+                  src="./model/scene.gltf"
+                  alt="A 3D model of the IMMUNEST"
+                  auto-rotate
+                  camera-controls
+                  disable-zoom
+                  ios-src="./model/scene.gltf"
+                >
+                </model-viewer>
+              </div>
+              <div class="header-content__body">
+                <h1
+                  class="
+                    header-content__title
+                    --show-items
+                    --translate-header-title
+                  "
+                >
+                  <span class="header-content__title--size">IMMUNEST</span>
+                  Sink + Vit.C + D<sub>3</sub>
+                </h1>
+                <div
+                  class="
+                    header-content__description
+                    --show-items
+                    --translate-header-description
+                  "
+                >
+                  IMMUNEST - antikorlarning shakllanishini, granulotsitlar va
+                  makrofaglarning fagotsitik va bakterial faolligini, interferon
+                  ishlab chiqarishda yordam beradi - tanadagi immunitet
+                  hujayralarining faolligini oshiradi
+                </div>
+                <button
+                  type="button"
+                  class="
+                    header-content__link
+                    --show-items
+                    --translate-header-link
+                  "
+                >
+                  sotib olish
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__wave wave">
+          <span class="wave__arrow"></span>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="advice">
+          <div class="container">
+            <h2
+              class="
+                advice__main-title
+                section-title
+                --anim-items
+                --translate-advice-main-title
+              "
+            >
+              Immunitet tizimini qanday himoya qilish mumkin
+            </h2>
+            <div class="advice__row">
+              <div class="advice__item">
+                <div class="advice__body">
+                  <h3
+                    class="
+                      advice__title
+                      --anim-items
+                      --translate-advice-title-fruits
+                    "
+                  >
+                    To'g'ri <br />
+                    ovqatlanish
+                  </h3>
+                  <p
+                    class="
+                      advice__description
+                      --anim-items
+                      --translate-advice-description-fruits
+                    "
+                  >
+                    Endi har qachongidan ham tanani infektsiyalardan himoya
+                    qilish muammosi oldi olinadi. Bundan tashqari, vitaminlar va
+                    mikroelementlarga boy bo'lgan oddiy, ammo to'g'ri
+                    ovqatlanish yordamida immunitetni yaxshilashingiz mumkin.
+                    Immunitetni mustahkamlash uchun qaysi moddalar kerakligini
+                    aniq aytish mumkin.
+                  </p>
+                </div>
+                <div
+                  class="
+                    advice__images advice__images--fruits
+                    --anim-items
+                    --lazy__image
+                  "
+                >
+                  <div class="advice__image">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/fruits.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/fruits.png"
+                        alt="Fruits"
+                    /></picture>
+                  </div>
+                  <div class="advice__image">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/fruits-2.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/fruits-2.png"
+                        alt="Fruits"
+                    /></picture>
+                  </div>
+                  <div class="advice__image">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/fruits.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/fruits.png"
+                        alt="Fruits"
+                    /></picture>
+                  </div>
+                  <div class="advice__image">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/circle.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/circle.png"
+                        alt="Advice"
+                    /></picture>
+                  </div>
+                  <div class="--lazy__spinner"></div>
+                </div>
+              </div>
+            </div>
+            <div class="advice__row">
+              <div class="advice__item advice__item--reverse">
+                <div class="advice__body">
+                  <h3
+                    class="
+                      advice__title
+                      --anim-items
+                      --translate-advice-title-gym
+                    "
+                  >
+                    Sport bilan <br />
+                    shug'ullanish
+                  </h3>
+                  <p
+                    class="
+                      advice__description
+                      --anim-items
+                      --translate-advice-description-gym
+                    "
+                  >
+                    Olimlar kasallik mavsumida qanday yuklar tanani
+                    mustahkamlashga yordam berishini aniqladilar. Ma'lumki,
+                    sog'lom turmush tarzi nafaqat butun vujudga, balki immunitet
+                    holatiga ham ta'sir qiladi. Mantiqiyki, odam qanchalik
+                    sog'lom va kuchli bo'lsa, u kasalliklarga va shamollashga
+                    shunchalik kam moyil bo'ladi.
+                  </p>
+                </div>
+                <div
+                  class="
+                    advice__images advice__images--gym
+                    --anim-items
+                    --lazy__image
+                  "
+                >
+                  <div class="advice__image-gym">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/gym.webp"
+                        type="image/webp" />
+                      <img src="./images/advice-section/gym.png" alt="GYM"
+                    /></picture>
+                  </div>
+                  <div class="advice__image-gym">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/gym-2.webp"
+                        type="image/webp" />
+                      <img src="./images/advice-section/gym-2.png" alt="GYM"
+                    /></picture>
+                  </div>
+                  <div class="advice__image-gym">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/gym-3.webp"
+                        type="image/webp" />
+                      <img src="./images/advice-section/gym-3.png" alt="GYM"
+                    /></picture>
+                  </div>
+                  <div class="advice__image-gym">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/gym-circle.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/gym-circle.png"
+                        alt="Advice"
+                    /></picture>
+                  </div>
+                  <div class="--lazy__spinner"></div>
+                </div>
+              </div>
+            </div>
+            <div class="advice__row">
+              <div class="advice__item">
+                <div class="advice__body">
+                  <h3
+                    class="
+                      advice__title
+                      --anim-items
+                      --translate-advice-title-hygiene
+                    "
+                  >
+                    Gigienaga rioya <br />
+                    qilish
+                  </h3>
+                  <p
+                    class="
+                      advice__description
+                      --anim-items
+                      --translate-advice-description-hygiene
+                    "
+                  >
+                    Shaxsiy gigiena nafaqat tashqi ko'rinishda, balki yuqumli
+                    kasalliklarning paydo bo'lishi va tarqalishining oldini
+                    olishda ham muhim ahamiyatga ega. To'g'ri choralar ko'rish
+                    sizni turli kasalliklardan himoya qiladi va ularning
+                    tarqalishining oldini oladi.
+                  </p>
+                </div>
+                <div
+                  class="
+                    advice__images advice__images--hygiene
+                    --anim-items
+                    --lazy__image
+                  "
+                >
+                  <div class="advice__image-hygiene">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/shampoo.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/shampoo.png"
+                        alt="Hygiene"
+                    /></picture>
+                  </div>
+                  <div class="advice__image-hygiene">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/toothbrush.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/toothbrush.png"
+                        alt="Hygiene"
+                    /></picture>
+                  </div>
+                  <div class="advice__image-hygiene">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/toothpaste.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/toothpaste.png"
+                        alt="Hygiene"
+                    /></picture>
+                  </div>
+                  <div class="advice__image-hygiene">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/spray.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/spray.png"
+                        alt="Hygiene"
+                    /></picture>
+                  </div>
+                  <div class="advice__image-hygiene">
+                    <picture
+                      ><source
+                        srcset="./images/advice-section/hygiene-circle.webp"
+                        type="image/webp" />
+                      <img
+                        src="./images/advice-section/hygiene-circle.png"
+                        alt=""
+                    /></picture>
+                  </div>
+                  <div class="--lazy__spinner"></div>
+                </div>
+              </div>
+            </div>
+            <section class="advice__product product">
+              <h2
+                class="
+                  product__title
+                  section-title
+                  --anim-items
+                  --translate-product-title
+                "
+              >
+                Ammo immunitetni himoya qilishning oddiy usuli ham bor
+              </h2>
+              <div class="product__image --anim-items --lazy__image">
+                <picture
+                  ><source
+                    srcset="./images/product-immunest.webp"
+                    type="image/webp" />
+                  <img src="./images/product-immunest.png" alt="Immunest"
+                /></picture>
+                <div class="--lazy__spinner"></div>
+              </div>
+              <p
+                class="
+                  product__description
+                  --anim-items
+                  --translate-product-description
+                "
+              >
+                IMMUNEST - antikorlarning shakllanishini, granulotsitlar va
+                makrofaglarning fagotsitik va bakterial faolligini, interferon
+                ishlab chiqarishda yordam beradi - tanadagi immunitet
+                hujayralarining faolligini oshiradi; - teridagi mayda yaralar va
+                yoriqlarni davolashga yordam beradi; - immunitet tizimini
+                mustahkamlaydi.
+              </p>
+            </section>
+          </div>
+          <div class="advice__wave wave">
+            <span class="wave__arrow"></span>
+          </div>
+          <div class="advice__sink --decor">
+            <picture
+              ><source srcset="./images/decor/sink.webp" type="image/webp" />
+              <img src="./images/decor/sink.png" alt="Sink"
+            /></picture>
+          </div>
+          <div class="advice__VitC --decor">
+            <picture
+              ><source srcset="./images/decor/VitC.webp" type="image/webp" />
+              <img src="./images/decor/VitC.png" alt="Vit.c"
+            /></picture>
+          </div>
+          <div class="advice__bacterium --decor">
+            <picture
+              ><source
+                srcset="./images/decor/bacterium.webp"
+                type="image/webp" />
+              <img src="./images/decor/bacterium.png" alt="Vit.c"
+            /></picture>
+          </div>
+          <div class="advice__D3 --decor">
+            <picture
+              ><source srcset="./images/decor/D3.webp" type="image/webp" />
+              <img src="./images/decor/D3.png" alt="Vit.c"
+            /></picture>
+          </div>
+        </section>
+
+        <section class="about --anim-items">
+          <div class="about__bacterium --blue">
+            <picture
+              ><source
+                srcset="./images/blue-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/blue-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="about__bacterium --blue">
+            <picture
+              ><source
+                srcset="./images/blue-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/blue-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="about__bacterium --orange">
+            <picture
+              ><source
+                srcset="./images/orange-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/orange-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="about__bacterium --orange">
+            <picture
+              ><source
+                srcset="./images/orange-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/orange-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="about__bacterium --blue">
+            <picture
+              ><source
+                srcset="./images/blue-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/blue-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="about__bacterium --blue">
+            <picture
+              ><source
+                srcset="./images/blue-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/blue-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="about__bacterium --blue">
+            <picture
+              ><source
+                srcset="./images/blue-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/blue-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="about__bacterium --orange">
+            <picture
+              ><source
+                srcset="./images/orange-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/orange-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="about__bacterium --orange">
+            <picture
+              ><source
+                srcset="./images/orange-bacterium.webp"
+                type="image/webp" />
+              <img src="./images/orange-bacterium.png" alt="Bacterium"
+            /></picture>
+          </div>
+          <div class="container">
+            <div class="about__row">
+              <div class="shield__frontface">
+                <div class="about__shield shield --anim-items --lazy__image">
+                  <picture
+                    ><source srcset="./images/shield.webp" type="image/webp" />
+                    <img src="./images/shield.png" alt="Shield"
+                  /></picture>
+                  <div class="shield__d3 --shield-btn">
+                    <picture
+                      ><source
+                        srcset="./images/about-D3.webp"
+                        type="image/webp" />
+                      <img src="./images/about-D3.png" alt="D3"
+                    /></picture>
+                  </div>
+                  <div class="shield__sink --shield-btn">
+                    <picture
+                      ><source
+                        srcset="./images/about-sink.webp"
+                        type="image/webp" />
+                      <img src="./images/about-sink.png" alt="Sink"
+                    /></picture>
+                  </div>
+                  <div class="shield__vit --shield-btn">
+                    <picture
+                      ><source
+                        srcset="./images/about-VitC.webp"
+                        type="image/webp" />
+                      <img src="./images/about-VitC.png" alt="Vit-C"
+                    /></picture>
+                  </div>
+                </div>
+                <div class="--lazy__spinner"></div>
+              </div>
+              <div class="shield__backface">
+                <div class="shield__body">
+                  <picture
+                    ><source
+                      srcset="./images/text-shield.webp"
+                      type="image/webp" />
+                    <img src="./images/text-shield.png" alt="Shield"
+                  /></picture>
+                  <span class="shield__close-btn">&times;</span>
+                  <p class="shield__text --translate-shield-text-d3">
+                    D vitamini tanqisligi yuqori qon bosimi, osteoporoz va
+                    umuman o'lim hollari kabi ko'plab yoshga bog'liq sog'liqni
+                    saqlash sharoitlariga bog'liq. D vitamini sizning qon
+                    bosimingizni past tutadi, yallig'lanishni pasaytiradi va
+                    immun tizimini kuchaytiradi - bularning barchasi yurak
+                    sog'lig'ini saqlash va (hatto) saraton kasalligiga qarshi
+                    kurashish uchun foydali.
+                  </p>
+                  <p class="shield__text --translate-shield-text-sink">
+                    Rux (sink) – barcha fermentlar tarkibiga kiruvchi yagona
+                    metall bo‘lib, uning o‘rnini boshqa metall bosa olmaydi. Rux
+                    ko‘plab modda almashinuvi jarayonlarida ishtirok etib,
+                    tanadagi barcha hujayralarning normal ishlashini
+                    ta’minlaydi.Ruxning organ va to‘qimalardagi miqdori shu
+                    a’zolarning faoliyatida qanchalik ahamiyatga egaligini
+                    bildiradi.
+                  </p>
+                  <p class="shield__text --translate-shield-text-vit">
+                    Vitamin C — allergik holatlarni kuchini kamaytiradi, qon
+                    tomirlarini baquvvatlashtiradi, organizmning qarshilik
+                    kuchini oshiradi, birlashtiruvchi to‘qimalarning holatini
+                    yaxshilaydi. C vitamin — moddalar almashinuvida,
+                    biriktiruvchi to‘qimalarning o‘zlashtirilishida, bu
+                    to‘qimalarning normal holatda tutib turilishi va
+                    tiklanishida muhim ahamiyatga ega.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about__wave wave">
+            <span class="wave__arrow"></span>
+          </div>
+        </section>
+
+        <section class="instruction">
+          <div class="container">
+            <h2
+              class="
+                instruction__title
+                section-title
+                --anim-items
+                --translate-instruction-title
+              "
+            >
+              Immunest qo’llash uchun <br />
+              ko’rsatmalar
+            </h2>
+            <div class="instruction__row">
+              <div class="instruction__image --anim-items --lazy__image">
+                <picture
+                  ><source srcset="./images/immunest.webp" type="image/webp" />
+                  <img src="./images/immunest.png" alt="IMMUNEST"
+                /></picture>
+                <div class="--lazy__spinner"></div>
+              </div>
+              <div class="instruction__body">
+                <p
+                  class="
+                    instruction__description
+                    --anim-items
+                    --translate-instruction-text-1
+                  "
+                >
+                  Tanadagi immunitet hujayralarining faolligini oshiradi
+                </p>
+                <p
+                  class="
+                    instruction__description
+                    --anim-items
+                    --translate-instruction-text-2
+                  "
+                >
+                  Kiruvchi virus va bakteriyalardan himoya qiladi tez
+                  tiklanishiga yordam beradi
+                </p>
+                <p
+                  class="
+                    instruction__description
+                    --anim-items
+                    --translate-instruction-text-3
+                  "
+                >
+                  Teridagi mayda yaralar va yoriqlarni davolashga yordam beradi
+                </p>
+                <p
+                  class="
+                    instruction__description
+                    --anim-items
+                    --translate-instruction-text-4
+                  "
+                >
+                  Organizmdagi oqsillarning sintezini yaxshilaydi
+                </p>
+                <p
+                  class="
+                    instruction__description
+                    --anim-items
+                    --translate-instruction-text-5
+                  "
+                >
+                  Immunitet tizimini mustahkamlaydi
+                </p>
+                <p
+                  class="
+                    instruction__description
+                    --anim-items
+                    --translate-instruction-text-6
+                  "
+                >
+                  Qonda xolesterin miqdorini pasaytiradi
+                </p>
+                <p
+                  class="
+                    instruction__description
+                    --anim-items
+                    --translate-instruction-text-7
+                  "
+                >
+                  Antioksidant funksiyalari tufayli to’xtaydi
+                </p>
+                <p
+                  class="
+                    instruction__description
+                    --anim-items
+                    --translate-instruction-text-8
+                  "
+                >
+                  Virusli infeksiyalar tarqalishi
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__row">
+            <div class="footer__contact contact">
+              <div class="contact__body">
+                <div class="contact__popup">
+                  <svg
+                    class="contact__svg"
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fad"
+                    data-icon="check-circle"
+                    role="img"
+                    viewBox="0 0 512 512"
+                  >
+                    <path
+                      fill="MediumSeaGreen"
+                      d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm155.31 195.31l-184 184a16 16 0 0 1-22.62 0l-104-104a16 16 0 0 1 0-22.62l22.62-22.63a16 16 0 0 1 22.63 0L216 308.12l150.06-150.06a16 16 0 0 1 22.63 0l22.62 22.63a16 16 0 0 1 0 22.62z"
+                      class="fa-secondary"
+                    ></path>
+                    <path
+                      fill="white"
+                      d="M227.31 387.31a16 16 0 0 1-22.62 0l-104-104a16 16 0 0 1 0-22.62l22.62-22.63a16 16 0 0 1 22.63 0L216 308.12l150.06-150.06a16 16 0 0 1 22.63 0l22.62 22.63a16 16 0 0 1 0 22.62l-184 184z"
+                      class="fa-primary"
+                    ></path>
+                  </svg>
+                  <div class="contact__text --translate-contact-info-text">
+                    <p class="contact__greater">
+                      Assalamu Alaykum, <span class="contact__user-name"></span>
+                    </p>
+                    Murojaatingiz uchun tashakkur! Biz siz bilan tez orada
+                    <span class="contact__user-number"></span> raqamiga
+                    bog'lanamiz!
+                  </div>
+                </div>
+                <h3
+                  class="contact__title --anim-items --translate-contact-title"
+                >
+                  Biz bilan bog'laning
+                </h3>
+                <form
+                  class="contact__form form --anim-items"
+                  action="post"
+                  id="form"
+                >
+                  <div class="form__item">
+                    <input
+                      class="form__input --required"
+                      type="text"
+                      name="firstName"
+                      id="firstName"
+                      required
+                      onkeypress="isValueName(event)"
+                      placeholder="Ismingiz"
+                    />
+                    <span class="" id="contact__error-1"></span>
+                  </div>
+                  <div class="form__item">
+                    <input
+                      required
+                      value="+998"
+                      class="form__input --required"
+                      type="text"
+                      name="phoneNumber"
+                      id="phoneNumber"
+                      maxlength="13"
+                      onkeypress="isValueNum(event)"
+                    />
+
+                    <span class="" id="contact__error-2"></span>
+                  </div>
+                  <div class="form__item">
+                    <textarea
+                      class="form__input"
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="5"
+                      placeholder="Xabar kiritish"
+                      required
+                    ></textarea>
+                    <span id="contact__error-3"></span>
+                  </div>
+                  <button
+                    class="form__button --translate-form-button"
+                    type="submit"
+                  >
+                    Bog'lanish
+                  </button>
+                </form>
+              </div>
+              <div class="contact__info --anim-items">
+                <ul class="contact__list">
+                  <li class="contact__list-item">
+                    <a
+                      class="contact__link"
+                      href="https://anestpharma@gmail.com"
+                      target="_blank"
+                      ><i class="--icon-message"></i> anestpharma@gmail.com</a
+                    >
+                  </li>
+                  <li class="contact__list-item">
+                    <a
+                      class="contact__link"
+                      href="tel: +998712000464"
+                      class="contact__link"
+                    >
+                      <i class="--icon-call"></i> +99871 200 04 64</a
+                    >
+                  </li>
+                </ul>
+                <div
+                  class="contact__map --load-map --lazy__image"
+                  data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.5953341067542!2d69.2940288292577!3d41.36579900521087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIxJzU2LjkiTiA2OcKwMTcnNDAuNSJF!5e0!3m2!1sen!2s!4v1628578526065!5m2!1sen!2s"
+                >
+                  <div class="--lazy__spinner"></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__info --anim-items">
+              <p class="footer__text --translate-footer-text">
+                &copy; Barcha huquqlar himoyalangan
+              </p>
+              <div class="menu__social social">
+                <ul class="social__list">
+                  <li class="social__item">
+                    <a
+                      class="social__link"
+                      href="https://instagram.com/anest.uz"
+                      target="_blank"
+                      ><i class="--icon-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="social__item">
+                    <a
+                      h
+                      class="social__link"
+                      href="https://www.facebook.com/ANEST-103833408671147"
+                      target="_blank"
+                      ><i class="--icon-facebook"></i
+                    ></a>
+                  </li>
+                  <li class="social__item">
+                    <a
+                      class="social__link"
+                      href="https://t.me/anest_uz"
+                      target="_blank"
+                      ><i class="--icon-telegram"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__wave wave"></div>
+        <div class="footer__wave footer__wave--second wave"></div>
+      </footer>
+    </div>
+  </body>
+  <script src="./js/main.min.js"></script>
+</html>

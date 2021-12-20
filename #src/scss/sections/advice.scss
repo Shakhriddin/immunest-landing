@@ -1,0 +1,397 @@
+.advice {
+  min-height: 100vh;
+  padding: 7rem 0 4.5rem;
+  position: relative;
+  &__main-title {
+    @include adaptive-value(margin-bottom, 48, 24, 0);
+    position: relative;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0%, 50%) scaleY(1.5);
+    transition: all 0.4s linear;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0%, 0%) scaleY(1);
+      transition: all 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.2s;
+    }
+  }
+  &__row {
+    display: flex;
+    @include flex-center;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
+    margin: 0 -1rem;
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__item--reverse {
+    flex-direction: row-reverse;
+  }
+  &__body {
+    flex: 1 1 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    color: $mainColor;
+    @include adaptive-value(font-size, 56, 28, 0);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 1.33;
+    color: #6b6b6b;
+    font-weight: 400;
+  }
+  &__title,
+  &__description {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0%, 50%) scaleY(1.5);
+    transition: all 0.2s linear;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0%, 0%) scaleY(1);
+      transition: all 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.3s;
+    }
+  }
+  &__images {
+    padding: 0 1rem;
+    position: relative;
+    flex: 0 0 auto;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(30%, 50px);
+    transition: all 0.1s linear;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, 0);
+      transition: all 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.5s;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  &__images--fruits.--active {
+    transform: translate(52%, 0) scale(2.1);
+    &.--lazy__image {
+      .--lazy__spinner {
+        left: 23%;
+      }
+    }
+  }
+  &__images--gym.--active {
+    transform: translate(40%, 0) scale(1.65);
+    &.--lazy__image {
+      .--lazy__spinner {
+        left: 20%;
+      }
+    }
+  }
+  &__images--hygiene.--active {
+    transform: translate(60%, 0) scale(1.9);
+    &.--lazy__image {
+      .--lazy__spinner {
+        left: 13%;
+      }
+    }
+  }
+  &__image {
+    &:nth-child(1) {
+      z-index: 3;
+    }
+    &:nth-child(2) {
+      transform: translate(-55%, -15%);
+      z-index: 1;
+    }
+    &:nth-child(3) {
+      transform: translate(-110%, 0);
+      z-index: 1;
+    }
+    &:nth-child(4) {
+      transform: translate(-280%, 0);
+      z-index: 2;
+      img {
+        animation: circleAnim 50s linear infinite both;
+      }
+    }
+  }
+  &__image-gym {
+    &:nth-child(1) {
+      z-index: 3;
+    }
+    &:nth-child(2) {
+      transform: translate(-8%, 5%);
+      z-index: 1;
+    }
+    &:nth-child(3) {
+      transform: translate(-155%, -40%);
+    }
+    &:nth-child(4) {
+      transform: translate(-198%, -5%);
+      z-index: 2;
+      img {
+        animation: circleAnim 50s linear infinite both;
+      }
+    }
+  }
+  &__image-hygiene {
+    &:nth-child(2) {
+      transform: translate(-40%, 10%);
+      z-index: 1;
+    }
+    &:nth-child(3) {
+      transform: translate(-200%, 50%);
+      z-index: 2;
+    }
+    &:nth-child(4) {
+      transform: translate(-420%, 80%);
+      z-index: 3;
+    }
+    &:nth-child(5) {
+      transform: translate(-285%, 15%);
+      z-index: 2;
+      img {
+        animation: circleAnim 50s linear infinite both;
+      }
+    }
+  }
+  &__wave {
+    background: #e4f6ff;
+  }
+  &__sink {
+    @include position(absolute, top, -1%, left, 0);
+    transform: translate(-35%, 0);
+    &:hover {
+      transform: translate(-15%, 0) rotate(360deg);
+    }
+    &.--fixed {
+      @include position(fixed, top, 0%, left, 0);
+    }
+    img {
+      @include adaptive-value(width, 346, 120, 0);
+      animation: sinkAnim 10s linear 0.5s both infinite alternate;
+    }
+  }
+  &__VitC {
+    @include position(absolute, top, 30%, left, 0);
+    transform: translate(-30%, 0);
+    bottom: 12%;
+    &.--fixed {
+      top: unset;
+      @include position(fixed, bottom, 10%, left, 0);
+      &:hover {
+        transform: translate(-4%, 0) rotate(360deg);
+      }
+    }
+    img {
+      @include adaptive-value(width, 251, 92, 0);
+      animation: sinkAnim 10s linear 2s both infinite alternate;
+    }
+  }
+  &__bacterium {
+    @include position(absolute, top, 3%, right, 0);
+    transform: translate(40%, 0);
+    &:hover {
+      transform: translate(4%, 0) rotate(-360deg);
+    }
+    &.--fixed {
+      @include position(fixed, top, 4%, right, 0);
+    }
+    img {
+      @include adaptive-value(width, 316, 115, 0);
+      animation: sinkAnim 10s linear 3.5s both infinite alternate;
+    }
+  }
+  &__D3 {
+    @include position(absolute, top, 30%, right, 0);
+    transform: translate(40%, 0);
+    bottom: 3%;
+    &.--fixed {
+      top: unset;
+      @include position(fixed, bottom, 1%, right, 0);
+      &:hover {
+        transform: translate(4%, 0) rotate(-360deg);
+      }
+    }
+    img {
+      @include adaptive-value(width, 273, 99, 0);
+      animation: sinkAnim 10s linear 5s both infinite alternate;
+    }
+  }
+  &__sink,
+  &__VitC,
+  &__bacterium,
+  &__D3 {
+    transition: all 0.3s linear,
+      transform 0.6s cubic-bezier(0.375, 0.885, 0.62, 1.35);
+    transform-style: preserve-3d;
+    perspective: 600px;
+    &:hover {
+      transition: transform 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.35);
+    }
+  }
+  &__sink.--fixed,
+  &__VitC.--fixed,
+  &__bacterium.--fixed,
+  &__D3.--fixed {
+    transition: all 0.5s cubic-bezier(0.375, 0.885, 0.62, 1.275),
+      transform 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.35);
+    &:hover {
+      transition: transform 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.35);
+    }
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.2));
+    z-index: 1;
+  }
+}
+@keyframes sinkAnim {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  12% {
+    transform: translate(2.5%, 2.5%) scale(0.97);
+  }
+  25% {
+    transform: translate(5%, 5%) scale(1);
+  }
+  38% {
+    transform: translate(2.5%, 7.5%) scale(1.03);
+  }
+  50% {
+    transform: translate(0, 10%) scale(1);
+  }
+  63% {
+    transform: translate(-2.5%, 7.5%) scale(0.97);
+  }
+  75% {
+    transform: translate(-5%, 5%) scale(1);
+  }
+  88% {
+    transform: translate(-2.5%, 2.5%) scale(1.03);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+.product {
+  padding: 3rem 0;
+  display: flex;
+  @include flex-center;
+  flex-direction: column;
+  &__image {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0%, 50px);
+    transition: all 0.2s linear;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0%, 0%);
+      transition: all 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.3s;
+    }
+    img {
+      max-width: 100%;
+    }
+    margin-bottom: 3rem;
+    filter: drop-shadow(0 0.5rem 0.6rem rgba(0, 0, 0, 0.3));
+  }
+  &__description {
+    font-size: 18px;
+    line-height: 1.33;
+    color: #6b6b6b;
+    font-weight: 400;
+    text-align: center;
+  }
+  &__title,
+  &__description {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0%, 50%) scaleY(1.5);
+    transition: all 0.4s linear;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0%, 0%) scaleY(1);
+      transition: all 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.3s;
+    }
+  }
+}
+@keyframes circleAnim {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: $md) {
+  .advice {
+    &__item {
+      flex-direction: column;
+      padding: 3rem 0;
+      margin: -1rem 0;
+      margin-bottom: 4rem;
+    }
+    &__body {
+      padding: 1rem 0;
+    }
+    &__title,
+    &__description {
+      text-align: center;
+    }
+
+    &__images {
+      padding: 1rem 0;
+      width: 80%;
+    }
+    &__images--fruits.--active {
+      transform: translate(55%, 40%) scale(2.1);
+      &.--lazy__image {
+        .--lazy__spinner {
+          left: 21%;
+        }
+      }
+    }
+    &__images--gym.--active {
+      transform: translate(45%, 35%) scale(1.65);
+      &.--lazy__image {
+        .--lazy__spinner {
+          left: 19%;
+        }
+      }
+    }
+    &__images--hygiene.--active {
+      transform: translate(75%, 20%) scale(1.9);
+      &.--lazy__image {
+        .--lazy__spinner {
+          left: 9%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: $sm) {
+  .advice {
+    &__item {
+      margin-bottom: 1rem;
+    }
+    &__images {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.instruction {
+  position: relative;
+  padding: 6rem 0 4rem;
+  min-height: 100vh;
+  &__title {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0%, 50%) scaleY(1.5);
+    transition: all 0.4s linear;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0%, 0%) scaleY(1);
+      transition: all 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.3s;
+    }
+  }
+  &__row {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -1rem;
+  }
+  &__image {
+    flex: 0 1 769px;
+    padding: 0 1rem;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 50px);
+      transition: all 0.2s linear;
+    }
+    &.--active img {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0%, 0%);
+      transition: all 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.5s;
+    }
+  }
+  &__body {
+    flex: 1 1 auto;
+    padding: 0 1rem;
+  }
+  &__description {
+    @include adaptive-value(font-size, 28, 20, 0);
+    font-weight: 500;
+    line-height: 1.43;
+    color: #2c2c2c;
+    position: relative;
+    &:not(:last-child) {
+      @include adaptive-value(margin-bottom, 24, 12, 0);
+    }
+    &::before {
+      content: '';
+      @include position(absolute, top, 50%, left, -25px);
+      transform: translate(0, -50%);
+      width: 13px;
+      height: 13px;
+      background: #35b3f5;
+      border-radius: 50%;
+    }
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0%, 50%) scaleY(1.5);
+    transition: all 0.3s linear;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0%, 0%) scaleY(1);
+      transition: all 0.9s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.4s;
+    }
+  }
+}
+@media only screen and (max-width: $md) {
+  .instruction {
+    &__row {
+      flex-direction: column;
+      justify-content: center;
+      margin: -1rem 0;
+      padding: 0 1rem;
+    }
+    &__image {
+      padding: 1rem 0;
+      flex: 0 1 auto;
+    }
+    &__body {
+      padding: 1rem 0;
+    }
+  }
+}

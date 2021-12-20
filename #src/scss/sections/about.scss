@@ -1,0 +1,272 @@
+.about {
+  min-height: 100vh;
+  background: #e4f6ff;
+  position: relative;
+  @include flex-center;
+  &__wave {
+    background: #fff;
+  }
+  &__bacterium {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s linear 0s;
+  }
+  &.--active &__bacterium {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s linear 0.5s;
+  }
+  &__bacterium {
+    position: absolute;
+    img {
+      max-width: 100%;
+      animation: sinkAnim 10s linear both infinite alternate;
+    }
+    &.--blue {
+      @include adaptive-value(width, 247, 120, 0);
+    }
+    &.--orange {
+      @include adaptive-value(width, 169, 85, 0);
+    }
+    &:nth-child(1) {
+      position: absolute;
+      @include adaptive-value(top, 320, 150, 0);
+      @include adaptive-value(left, 150, -10, 0);
+      transform: scale(0.9);
+      img {
+        animation-delay: 0.5s;
+      }
+    }
+    &:nth-child(2) {
+      position: absolute;
+      @include adaptive-value(top, 560, 280, 0);
+      @include adaptive-value(left, 220, 0, 0);
+      transform: scale(0.4);
+      filter: blur(6px);
+      img {
+        animation-delay: 1.5s;
+      }
+    }
+    &:nth-child(3) {
+      position: absolute;
+      @include adaptive-value(top, 50, 0, 0);
+      @include adaptive-value(left, 300, 30, 0);
+      transform: scale(0.5);
+      filter: blur(6px);
+      img {
+        animation-delay: 2.5s;
+      }
+    }
+    &:nth-child(4) {
+      position: absolute;
+      @include adaptive-value(bottom, 80, 20, 0);
+      @include adaptive-value(left, 400, 10, 0);
+      transform: scale(0.9);
+      img {
+        animation-delay: 3.5s;
+      }
+    }
+    &:nth-child(5) {
+      position: absolute;
+      @include adaptive-value(bottom, 60, -10, 0);
+      @include adaptive-value(right, 400, 50, 0);
+      transform: scale(0.6);
+      img {
+        animation-delay: 4.5s;
+      }
+    }
+    &:nth-child(6) {
+      position: absolute;
+      @include adaptive-value(bottom, 150, 50, 0);
+      @include adaptive-value(right, 100, -30, 0);
+      transform: scale(0.5);
+      filter: blur(6px);
+      img {
+        animation-delay: 5.5s;
+      }
+    }
+    &:nth-child(7) {
+      position: absolute;
+      @include adaptive-value(bottom, 400, 150, 0);
+      @include adaptive-value(right, 150, -15, 0);
+      transform: scale(0.8);
+      img {
+        animation-delay: 6.5s;
+      }
+    }
+    &:nth-child(8) {
+      position: absolute;
+      @include adaptive-value(bottom, 240, 60, 0);
+      @include adaptive-value(right, 340, 40, 0);
+      transform: scale(0.5);
+      img {
+        animation-delay: 7.5s;
+      }
+    }
+    &:nth-child(9) {
+      position: absolute;
+      @include adaptive-value(top, 50, 0, -10);
+      @include adaptive-value(right, 200, -10, 0);
+      transform: scale(0.7);
+      filter: blur(6px);
+      img {
+        animation-delay: 8.5s;
+      }
+    }
+  }
+  &__row {
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    @include adaptive-value(width, 412, 280, 0);
+  }
+  &__shield {
+    position: relative;
+  }
+}
+.shield {
+  img {
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.3));
+  }
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0%, 50px);
+  transition: all 0.2s linear 0s;
+  &.--active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0%, 0%);
+    transition: all 0.7s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.3s;
+  }
+  &__frontface,
+  &__backface {
+    @include position(absolute, top, 50%, left, 50%);
+    transform: perspective(800px) translate(-50%, -50%);
+    width: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+  }
+  &__frontface {
+    transition: transform 0.8s cubic-bezier(0.675, 0.885, 0.62, 1.275),
+      opacity 0.3s linear 0.3s, visibility 0.3s linear 0.3s;
+    &.--active {
+      opacity: 0;
+      visibility: hidden;
+      transform: perspective(800px) translate(-50%, -50%) rotateY(180deg);
+      transition: transform 1s cubic-bezier(0.375, 0.885, 0.62, 1.475),
+        opacity 0.3s linear, visibility 0.3s linear;
+    }
+  }
+  &__backface {
+    opacity: 0;
+    visibility: hidden;
+    transform: perspective(800px) translate(-50%, -50%) rotateY(180deg);
+    transition: transform 0.8s cubic-bezier(0.675, 0.885, 0.62, 1.275),
+      opacity 0.3s linear, visibility 0.3s linear;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transition: transform 1s cubic-bezier(0.375, 0.885, 0.62, 1.475),
+        opacity 0.5s linear 0.2s, visibility 0.5s linear 0.2s;
+      transform: perspective(800px) translate(-50%, -50%) rotateY(360deg);
+    }
+  }
+  &__body {
+    position: relative;
+    width: 100%;
+    img {
+      max-width: 100%;
+      object-fit: cover;
+      filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.3))
+        drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.2));
+    }
+  }
+  &__close-btn {
+    display: inline-block;
+    @include position(absolute, top, -35px, right, 15px);
+    width: 1rem;
+    height: 1rem;
+    padding: 0 0 0 1rem;
+    font-size: 5rem;
+    cursor: pointer;
+    color: #ff0000;
+    z-index: 100;
+    text-shadow: 0 0 0.5rem rgba(255, 0, 0, 0.3);
+  }
+  &__text {
+    @include position(absolute, top, 15%, left, 50%);
+    @include adaptive-value(font-size, 22, 15, 0);
+    @include adaptive-value(padding-right, 24, 15, 0);
+    @include adaptive-value(padding-left, 24, 15, 0);
+    transform: translate(-50%, 50%) scaleY(1.5);
+    width: 100%;
+    font-weight: 400;
+    color: #2c2c2c;
+    text-align: center;
+    line-height: 1.27;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s linear 0s;
+    &.--active {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0) scaleY(1);
+      transition: transform 0.6s cubic-bezier(0.375, 0.885, 0.62, 1.275) 0.9s,
+        opacity 0.8s linear 0.9s, visibility 0.8s linear 0.9s;
+    }
+  }
+  img {
+    object-fit: cover;
+    max-width: 100%;
+  }
+  &__d3 {
+    @include position(absolute, top, 0, left, 0);
+    transform: translate(-60%, -35%);
+    animation: shieldBtnAnim 1s ease-in-out alternate both infinite;
+  }
+  &__sink {
+    @include position(absolute, top, 0, right, 0);
+    transform: translate(60%, -35%);
+    animation: shieldBtnAnim 1s ease-in-out 0.5s alternate both infinite;
+  }
+  &__vit {
+    @include position(absolute, bottom, 0, left, 50%);
+    transform: translate(-45%, 60%);
+    animation: shieldBtnAnim 1s ease-in-out 1s alternate both infinite;
+  }
+  &__d3,
+  &__sink,
+  &__vit {
+    cursor: pointer;
+    img {
+      transition: transform 0.5s cubic-bezier(0.375, 0.885, 0.62, 1.475) 0.3s;
+      @include adaptive-value(width, 213, 120, 0);
+    }
+    &.--active {
+      img {
+        transform: scale(0.3) rotate(360deg);
+        transition: transform 0.5s cubic-bezier(0.375, 0.885, 0.62, 1.475);
+      }
+    }
+  }
+}
+@keyframes shieldBtnAnim {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1.3);
+  }
+}
+@media only screen and (max-width: $sm) {
+  .shield {
+    &__d3 {
+      transform: translate(-20%, -35%);
+    }
+    &__sink {
+      transform: translate(20%, -35%);
+    }
+  }
+}

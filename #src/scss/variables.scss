@@ -1,0 +1,18 @@
+$fontFamily: 'Gilroy', sans-serif;
+$mainColor: #0e93ff;
+
+$minWidth: 320px;
+$maxWidth: 1920; //1920
+$maxWidthContainer: 1170; //1170
+$xl: $maxWidthContainer + 12;
+$lg: 991.98px;
+$md: 767.98px;
+$sm: 575.98px;
+$breakpoints: (
+  xs: 0,
+  sm: 575.98px,
+  md: 767.98px,
+  lg: 991.98px,
+  xl: 1200px,
+  xxl: 1400px,
+);

@@ -1,0 +1,148 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__row">
+      <div class="footer__contact contact">
+        <div class="contact__body">
+          <div class="contact__popup">
+            <svg
+              class="contact__svg"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fad"
+              data-icon="check-circle"
+              role="img"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="MediumSeaGreen"
+                d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm155.31 195.31l-184 184a16 16 0 0 1-22.62 0l-104-104a16 16 0 0 1 0-22.62l22.62-22.63a16 16 0 0 1 22.63 0L216 308.12l150.06-150.06a16 16 0 0 1 22.63 0l22.62 22.63a16 16 0 0 1 0 22.62z"
+                class="fa-secondary"
+              ></path>
+              <path
+                fill="white"
+                d="M227.31 387.31a16 16 0 0 1-22.62 0l-104-104a16 16 0 0 1 0-22.62l22.62-22.63a16 16 0 0 1 22.63 0L216 308.12l150.06-150.06a16 16 0 0 1 22.63 0l22.62 22.63a16 16 0 0 1 0 22.62l-184 184z"
+                class="fa-primary"
+              ></path>
+            </svg>
+            <div class="contact__text --translate-contact-info-text">
+              <p class="contact__greater">
+                Assalamu Alaykum, <span class="contact__user-name"></span>
+              </p>
+              Murojaatingiz uchun tashakkur! Biz siz bilan tez orada
+              <span class="contact__user-number"></span> raqamiga bog'lanamiz!
+            </div>
+          </div>
+          <h3 class="contact__title --anim-items --translate-contact-title">
+            Biz bilan bog'laning
+          </h3>
+          <form class="contact__form form --anim-items" action="post" id="form">
+            <div class="form__item">
+              <input
+                class="form__input --required"
+                type="text"
+                name="firstName"
+                id="firstName"
+                required
+                onkeypress="isValueName(event)"
+                placeholder="Ismingiz"
+              />
+              <span class="" id="contact__error-1"></span>
+            </div>
+            <div class="form__item">
+              <input
+                required
+                value="+998"
+                class="form__input --required"
+                type="text"
+                name="phoneNumber"
+                id="phoneNumber"
+                maxlength="13"
+                onkeypress="isValueNum(event)"
+              />
+
+              <span class="" id="contact__error-2"></span>
+            </div>
+            <div class="form__item">
+              <textarea
+                class="form__input"
+                name="message"
+                id="message"
+                cols="30"
+                rows="5"
+                placeholder="Xabar kiritish"
+                required
+              ></textarea>
+              <span id="contact__error-3"></span>
+            </div>
+            <button class="form__button --translate-form-button" type="submit">
+              Bog'lanish
+            </button>
+          </form>
+        </div>
+        <div class="contact__info --anim-items">
+          <ul class="contact__list">
+            <li class="contact__list-item">
+              <a
+                class="contact__link"
+                href="https://anestpharma@gmail.com"
+                target="_blank"
+                ><i class="--icon-message"></i> anestpharma@gmail.com</a
+              >
+            </li>
+            <li class="contact__list-item">
+              <a
+                class="contact__link"
+                href="tel: +998712000464"
+                class="contact__link"
+              >
+                <i class="--icon-call"></i> +99871 200 04 64</a
+              >
+            </li>
+          </ul>
+          <div
+            class="contact__map --load-map --lazy__image"
+            data-map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d748.5953341067542!2d69.2940288292577!3d41.36579900521087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIxJzU2LjkiTiA2OcKwMTcnNDAuNSJF!5e0!3m2!1sen!2s!4v1628578526065!5m2!1sen!2s"
+          >
+            <div class="--lazy__spinner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__info --anim-items">
+        <p class="footer__text --translate-footer-text">
+          &copy; Barcha huquqlar himoyalangan
+        </p>
+        <div class="menu__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a
+                class="social__link"
+                href="https://instagram.com/anest.uz"
+                target="_blank"
+                ><i class="--icon-instagram"></i
+              ></a>
+            </li>
+            <li class="social__item">
+              <a
+                h
+                class="social__link"
+                href="https://www.facebook.com/ANEST-103833408671147"
+                target="_blank"
+                ><i class="--icon-facebook"></i
+              ></a>
+            </li>
+            <li class="social__item">
+              <a
+                class="social__link"
+                href="https://t.me/anest_uz"
+                target="_blank"
+                ><i class="--icon-telegram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__wave wave"></div>
+  <div class="footer__wave footer__wave--second wave"></div>
+</footer>
